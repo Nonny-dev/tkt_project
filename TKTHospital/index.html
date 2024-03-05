@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <section id="page">
+
+        <main-1>
+
+        </main-1>
+
+        <main-2> 
+            <table id="dynamic-table">
+                <tr>
+                    <td><a href="" class="btn btn-1">Hover</a></td>
+                    <td><a href="" class="btn btn-1">Hover</a></td>
+                    <td><a href="" class="btn btn-1">Hover</a></td>
+                </tr>
+            </table>
+        </main-2>
+
+    </section>
+
+    <script>
+        const numRows = 6;
+        const numCols = 3;
+
+        const table = document.getElementById('dynamic-table');
+        for (let i = 0; i < numRows; i++) {
+            const row = table.insertRow();
+            for (let j = 0; j < numCols; j++) {
+                const cell = row.insertCell();
+                const btn = document.createElement('a');
+                btn.href = "#";
+                btn.className = "btn btn-1";
+                btn.textContent = "Hover";
+                cell.appendChild(btn);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffafa;
+}
+
+.btn {
+    display: block;
+    font-size: 20px;
+    color: #f18edc;
+    border: 2px solid #f18edc;
+    background: transparent;
+    margin: 0 0 40px 40px;
+    padding: 20px 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    position: relative;
+    transition: 0.4s all ease-in-out 0s;
+}
+
+.btn:hover {
+    color: rgb(255, 255, 255);
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #f18edc;
+    transition: 0.4s all ease-in-out 0s;
+}
+
+.btn-1::before {
+    right: unset;
+    left: 0;
+    width: 0;
+}
+
+.btn-1:hover::before {
+    right: unset;
+    left: 0;
+    width: 100%;
+}
+
+
+#page{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    gap: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas: 
+    "main-1 main-2";
+    grid-template-columns: 1fr 1fr;
+}
+
+#page > main-1 {
+    grid-area: main-1;
+    background: url(img/bg1.png);
+    background-size: cover;
+}
+
+#page > main-2 {
+    padding-top: 100px;
+    grid-area: main-2;
+}
+
+table {
+    border-spacing: 20px; 
+}
